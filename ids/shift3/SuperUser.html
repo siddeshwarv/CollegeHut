@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="Suser.js"> </script>
+	<title>Logged in as SuperUser</title>
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3-black.css">
+	<link rel="stylesheet" href="opp.css">
+</head>
+<body>
+
+	<header class="w3-container w3-theme w3-padding" id="myHeader">
+	  <div class="w3-center">
+	  <h4>You're signed in as </h4>
+	  <h1 class="w3-xxxlarge w3-animate-bottom">Super User</h1>
+	    
+	  </div>
+	</header>
+
+
+
+
+	<div ng-app="MyApp" ng-controller="MyController" >
+			<div class="w3-center">
+				<h2>Election Status</h2><br>		
+						<input type="radio" class="w3-radio" ng-model="ElectionStatus" ng-value=1><label>On</label><br>
+						<input type="radio" class="w3-radio" ng-model="ElectionStatus" ng-value=0><label>Off</label>
+				<br>
+				<br>	    
+				<input type="button" class="w3-button w3-theme" value="Submit" ng-click="UpdateElection()" />
+			</div>
+		<br>
+		<br>
+		<br>
+		<div class="w3-center">
+			<br>
+			<h2>Enter table name for this New Batch </h2><label><input type = "text" class="w3-input" ng-model="TName"></label><br>
+			<input type="button" class="w3-button w3-theme" value="Create New Table" ng-click="CreateTable()">
+			<br>
+			<br>
+		</div>
+		<br>
+		<br>
+		<br>
+
+		<div class="w3-center">
+		<h2>Add New Batch</h2><br>
+		<label><input type="radio" class="w3-radio" ng-model="AddNewBatch" ng-value=1>On</label><br>    
+		<label><input type="radio" class="w3-radio" ng-model="AddNewBatch" ng-value=0>Off</label><br>
+		<br>
+		<input type="button" class="w3-button w3-theme" value="Submit" ng-click="UpdateBatch()">
+		</div>
+
+	</div>
+		<br>
+		<br>
+		<br>
+	
+	
+	<form action="CandidateEntry.php" method="post" class="w3-container w3-card-4">
+		<h3>Enter New Candidate to the Elections</h3><br><br>
+		Name - <input type="text" class="w3-input" name="name"><br>
+		RollNo - <input type="text" class="w3-input" name="roll"><br>
+		Post - <input type="text" class="w3-input" name="post"><br>
+		Promise1 - <input type="text" class="w3-input" name="Vada1"><br>
+		Promise2 - <input type="text" class="w3-input" name="Vada2"><br>
+		Promise3 - <input type="text" class="w3-input" name="Vada3"><br>
+		Promise4 - <input type="text" class="w3-input" name="Vada4"><br>
+		Promise5 - <input type="text" class="w3-input" name="Vada5"><br>	
+		<input class="w3-button w3-theme" type="submit">
+	</form>
+	<br>
+	<br>
+
+	<footer class="w3-container w3-theme-dark w3-padding-16">
+	  <h3>Powered by CollegeHut</h3>
+	  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+	    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+	    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+	    </span></a>
+	  </div>
+	  <p>Made By a group of enthusiastic IIT Mandi students <br>1.Kaustubh Verma &nbsp 2.Ayush Meghwani &nbsp 3.Akul Gupta &nbsp 4.Arpit Batra</p>
+	</footer>
+
+
+
+	
+</body>
+
+</html>

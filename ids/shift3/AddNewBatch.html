@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Add your data
+	</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="AddNewBatch.js"> </script>
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3-black.css">
+	<link rel="stylesheet" href="opp.css">
+</head>
+<body>
+	<header class="w3-container w3-theme w3-padding" id="myHeader">
+	  <div class="w3-center">
+	  <h4>Welcome to IIT Mandi </h4>
+	  <h1 class="w3-xxxlarge w3-animate-bottom">Enter your details</h1>
+	    
+	  </div>
+	</header>
+
+<br>
+<br>
+<center><h4>Select your Batch</h4></center>
+
+<div ng-app="Batch" ng-controller="AddBatch" >
+	<div class="w3-center">
+  		<div class="w3-dropdown-hover">
+			<select class="w3-button w3-theme" id = "Tlist" ng-model="Tlist" ng-change="selectedd()">
+		        <option ng-repeat="x in tlist" value="{{x.Table}}">{{x.Table}}</option>   
+		    </select>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<h2>You are requested to fill this form</h2>
+	<form action="AddNewBatch.php" class="w3-container w3-card-4" method="post">
+		Roll No.  <input type="text" class="w3-input" ng-model="RollNo"><br>
+		Name <input type="text" class="w3-input" ng-model="Name"><br>
+		Branch <input type="text" class="w3-input" ng-model="Branch"><br>
+		Hostel<input type="text" class="w3-input" ng-model="Hostel"><br>
+		RoomNo<input type="text" class="w3-input" ng-model="RoomNo"><br>
+		PhoneNo<input type="text" class="w3-input" ng-model="PhoneNo"><br>
+		GName<input type="text" class="w3-input" ng-model="GName"><br>
+		GPhoneNo<input type="text" class="w3-input" ng-model="GPhoneNo"><br>
+		Password<input type="password" class="w3-input" ng-model	="Password"><br>
+		<input type="button" class="w3-button w3-theme" value="Submit" ng-click="Insertdata()">
+	</form>
+</div>
+	<br>
+	<br>
+	<footer class="w3-container w3-theme-dark w3-padding-16">
+	  <h3>Powered by CollegeHut</h3>
+	  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+	    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+	    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+	    </span></a>
+	  </div>
+	  <p>Made By a group of enthusiastic IIT Mandi students <br>1.Kaustubh Verma &nbsp 2.Ayush Meghwani &nbsp 3.Akul Gupta &nbsp 4.Arpit Batra</p>
+	</footer>
+
+
+</body>
+</html>
